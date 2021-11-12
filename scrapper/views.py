@@ -19,7 +19,7 @@ for job in jobs:
   skill = job.find('span', class_="srp-skills").text.replace(" ", "")
   # skills.append(skill)
 
-  result[title] = [link, skill]
+  result[title] = (link, skill)
 
 def index(request):
   return render(request, 'scrapper/index.html', {'result':result})
