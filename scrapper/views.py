@@ -22,4 +22,4 @@ for job in jobs:
   result[title] = (link, skill)
 
 def index(request):
-  return render(request, 'scrapper/index.html', {'result':result})
+  return render(request, 'scrapper/index.html', {'result':jobs})
