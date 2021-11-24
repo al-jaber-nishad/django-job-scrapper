@@ -1,0 +1,20 @@
+{% extends "scrapper/base.html" %}
+{% block content %}
+
+{% for item in indian_jobs %}
+<br>
+<div class="card text-center">
+  <div class="card-header">
+    <h3>{{ item.header }}</h3>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Salary: {{ item.salary }}</h5>
+    <p class="card-text">{{ item.des }} <a href="{{ item.link }}">more..</a> </p>
+    
+  </div>
+  <div class="card-footer text-muted">
+    {{ item.location }}
+  </div>
+{% endfor %}
+
+{% endblock %}

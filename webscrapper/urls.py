@@ -19,5 +19,7 @@ from scrapper import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home')
+    path('', views.index, name='home'),
+    path('bd-jobs/', views.bdJobs, name='bd-jobs'),
+    path('ind-jobs/', views.indJobs, name='ind-jobs'),
 ]
